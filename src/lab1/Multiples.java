@@ -2,18 +2,27 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
-        int multis = 0;
-        int i = 0;
+        //int count = multiples();
+        //System.out.println(count);
+    }
 
-        while (i < 100) {
-            if (i % 3 == 0) {
+    public static int multiples(int  n, int a, int b) {
+        int multis = 0;
+        int i = 1;
+
+        while (i < n) {
+            if (i % a == 0) {
                 multis++;
             }
-            else if (i % 5 == 0) {
+            else if (i % b == 0) {
                 multis++;
             }
             i++;
         }
-        System.out.println(multis);
+        return(multis);
+    }
+
+    public static int multiples() {
+        return multiples(3, 5, 1000);
     }
 }
